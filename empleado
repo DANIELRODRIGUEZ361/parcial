@@ -1,1 +1,54 @@
+class Empleado extends Persona {
+    private double salario;
+    private String jefeInmediato;
+    private int añosExperiencia;
+    private String nombreCargo;
 
+    public Empleado(String nombre, String apellido, String direccion, String telefono, int edad, String email,
+                    double salario, String jefeInmediato, int añosExperiencia) {
+        super(nombre, apellido, direccion, telefono, edad, email);
+        this.salario = salario;
+        this.jefeInmediato = jefeInmediato;
+        this.añosExperiencia = añosExperiencia;
+        this.nombreCargo = determinarCargo();
+    }
+
+    public double getSalario() {
+        return salario;
+    }
+
+    public void setSalario(double salario) {
+        this.salario = salario;
+        this.nombreCargo = determinarCargo(); // Recalcular el cargo si cambia el salario
+    }
+
+    public String getJefeInmediato() {
+        return jefeInmediato;
+    }
+
+    public void setJefeInmediato(String jefeInmediato) {
+        this.jefeInmediato = jefeInmediato;
+    }
+
+    public int getAñosExperiencia() {
+        return añosExperiencia;
+    }
+
+    public void setAñosExperiencia(int añosExperiencia) {
+        this.añosExperiencia = añosExperiencia;
+        this.nombreCargo = determinarCargo(); // Recalcular el cargo si cambia la experiencia
+    }
+
+    public String getNombreCargo() {
+        return nombreCargo;
+    }
+    private String determinarCargo() {
+        if (salario >= 5000000 && añosExperiencia >= 5 && (edad >= 25 && edad <= 45)) {
+            return "Senior";
+        } else if (salario >= 900000 && salario <= 1200000 && añosExperiencia >= 1 && añosExperiencia <= 2 && (edad >= 18 && edad <= 22)) {
+            return "Junior";
+        } else {
+            return "No asignado";
+        }
+    }
+}
