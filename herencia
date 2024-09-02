@@ -18,14 +18,14 @@ public class Herencias {
 
         System.out.print("Digite su edad: ");
         int edad = entrada.nextInt();
-        scanner.nextLine(); 
+        entrada.nextLine(); 
 
         System.out.print("Digite su email: ");
         String email = entrada.nextLine();
 
         System.out.print("Digite su salario: ");
         double salario = entrada.nextDouble();
-        scanner.nextLine();
+        entrada.nextLine();
         System.out.print("Digite su jefe inmediato: ");
         String jefeInmediato = entrada.nextLine();
 
@@ -46,6 +46,6 @@ public class Herencias {
         System.out.println("Años de Experiencia: " + empleado.getAñosExperiencia());
         System.out.println("Cargo: " + empleado.getNombreCargo());
 
-        scanner.close();
+        entrada.close();
     }
 }
