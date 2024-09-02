@@ -2,35 +2,35 @@ import java.util.Scanner;
 
 public class Herencias {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner entrada = new Scanner(System.in);
 
         System.out.print("Digite su nombre: ");
-        String nombre = scanner.nextLine();
+        String nombre = entrada.nextLine();
 
         System.out.print("Digite su apellido: ");
-        String apellido = scanner.nextLine();
+        String apellido = entrada.nextLine();
 
         System.out.print("Digite su direccion: ");
-        String direccion = scanner.nextLine();
+        String direccion = entrada.nextLine();
 
         System.out.print("Digite su telefono: ");
-        String telefono = scanner.nextLine();
+        String telefono = entrada.nextLine();
 
         System.out.print("Digite su edad: ");
-        int edad = scanner.nextInt();
+        int edad = entrada.nextInt();
         scanner.nextLine(); 
 
         System.out.print("Digite su email: ");
-        String email = scanner.nextLine();
+        String email = entrada.nextLine();
 
         System.out.print("Digite su salario: ");
-        double salario = scanner.nextDouble();
+        double salario = entrada.nextDouble();
         scanner.nextLine();
         System.out.print("Digite su jefe inmediato: ");
-        String jefeInmediato = scanner.nextLine();
+        String jefeInmediato = entrada.nextLine();
 
         System.out.print("Digite sus años de experiencia: ");
-        int añosExperiencia = scanner.nextInt();
+        int añosExperiencia = entrada.nextInt();
 
         Empleado empleado = new Empleado(nombre, apellido, direccion, telefono, edad, email, salario, jefeInmediato, añosExperiencia);
 
