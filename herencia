@@ -18,15 +18,14 @@ public class Herencias {
 
         System.out.print("Digite su edad: ");
         int edad = scanner.nextInt();
-        scanner.nextLine(); // Consumir el salto de línea
+        scanner.nextLine(); 
 
         System.out.print("Digite su email: ");
         String email = scanner.nextLine();
 
         System.out.print("Digite su salario: ");
         double salario = scanner.nextDouble();
-        scanner.nextLine(); // Consumir el salto de línea
-
+        scanner.nextLine();
         System.out.print("Digite su jefe inmediato: ");
         String jefeInmediato = scanner.nextLine();
 
