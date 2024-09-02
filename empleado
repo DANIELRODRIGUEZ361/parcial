@@ -19,7 +19,7 @@ class Empleado extends Persona {
 
     public void setSalario(double salario) {
         this.salario = salario;
-        this.nombreCargo = determinarCargo(); // Recalcular el cargo si cambia el salario
+        this.nombreCargo = determinarCargo();
     }
 
     public String getJefeInmediato() {
@@ -36,7 +36,7 @@ class Empleado extends Persona {
 
     public void setAñosExperiencia(int añosExperiencia) {
         this.añosExperiencia = añosExperiencia;
-        this.nombreCargo = determinarCargo(); // Recalcular el cargo si cambia la experiencia
+        this.nombreCargo = determinarCargo(); 
     }
 
     public String getNombreCargo() {
